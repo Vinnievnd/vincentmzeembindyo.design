@@ -680,12 +680,12 @@ export default function PikaBoxPage() {
     </div>
     <div className="other-grid">
       <Link href="/work/fortune-ecash" className="project-card">
-        <div className="thumb"><img src="assets/phone-card.png" alt="" /></div>
+        <div className="thumb"><img src="/phone-card.png" alt="" /></div>
         <div className="row"><span className="title">Fortune eCash App</span><span className="btn">View <span className="arrow-icon"></span></span></div>
         <div className="tags"><span className="pill">UI/UX</span><span className="pill">Fintech</span><span className="pill">Research</span><span className="pill">Marketing</span></div>
       </Link>
       <Link href="/work/agriflow" className="project-card">
-        <div className="thumb"><img src="assets/phone-card.png" alt="" /></div>
+        <div className="thumb"><img src="/phone-card.png" alt="" /></div>
         <div className="row"><span className="title">AgriFlow App</span><span className="btn">View <span className="arrow-icon"></span></span></div>
         <div className="tags"><span className="pill">UI/UX</span><span className="pill">AgriTech</span><span className="pill">Field Research</span><span className="pill">Localisation</span></div>
       </Link>
