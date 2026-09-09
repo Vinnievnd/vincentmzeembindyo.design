@@ -4,8 +4,8 @@ import { createContext, useContext, useState } from "react";
 
 const DeviceChipsContext = createContext(null);
 
-export function DeviceChipsProvider({ copy, children }) {
-  const [active, setActive] = useState(null);
+export function DeviceChipsProvider({ copy, defaultDevice, children }) {
+  const [active, setActive] = useState(defaultDevice ?? null);
   return (
     <DeviceChipsContext.Provider value={{ copy, active, setActive }}>
       {children}
