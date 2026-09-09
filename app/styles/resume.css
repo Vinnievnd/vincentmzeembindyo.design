@@ -1,0 +1,56 @@
+/* ============================================
+   Resume page
+   ============================================ */
+.rs-page{padding-top:24px;padding-bottom:24px}
+.rs-top{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin:14px 0 22px}
+.rs-top h1{font-family:var(--font-serif);font-weight:600;font-size:clamp(30px,5vw,54px);letter-spacing:-.025em;line-height:1;margin:0}
+.rs-top p{font-size:14.5px;color:var(--ink-2);margin:8px 0 0;max-width:56ch;line-height:1.55}
+.rs-actions{display:flex;gap:10px;flex-wrap:wrap}
+.rs-dl{display:inline-flex;align-items:center;gap:11px;background:var(--green);color:#fff;border:1px solid var(--green);padding:13px 15px 13px 22px;border-radius:999px;font-family:var(--font-sans);font-weight:600;font-size:14.5px;line-height:1;text-decoration:none;cursor:pointer;box-shadow:0 14px 30px -18px rgba(20,30,25,.5);transition:transform .22s cubic-bezier(.22,1,.36,1),box-shadow .22s ease,background .2s ease}
+.rs-dl:hover{background:var(--green-2);color:#fff;transform:translateY(-2px);box-shadow:0 20px 38px -20px rgba(20,30,25,.55)}
+.rs-dl .ic{width:30px;height:30px;border-radius:50%;background:var(--gold);display:grid;place-items:center;flex-shrink:0;transition:transform .3s cubic-bezier(.22,1,.36,1)}
+.rs-dl:hover .ic{transform:translateY(2px)}
+.rs-dl .ic::after{content:"";width:14px;height:14px;background:var(--green-2);-webkit-mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 3v13m0 0 5-5m-5 5-5-5M4 20h16' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/></svg>") center/contain no-repeat;mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 3v13m0 0 5-5m-5 5-5-5M4 20h16' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/></svg>") center/contain no-repeat}
+.rs-print{display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid var(--line);color:var(--ink-2);padding:13px 22px;border-radius:999px;font-family:inherit;font-weight:600;font-size:14.5px;line-height:1;cursor:pointer;transition:border-color .2s ease,color .2s ease}
+.rs-print:hover{border-color:var(--ink);color:var(--ink)}
+
+/* ---- paper ---- */
+.rs-paper{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 24px 60px -34px rgba(20,30,25,.34);padding:clamp(24px,4.4vw,60px);max-width:860px;margin:0 auto;font-size:13.2px;line-height:1.5;color:#1a1a1a}
+.rs-name{font-family:var(--font-serif);font-weight:700;font-size:clamp(20px,2.8vw,27px);letter-spacing:-.02em;line-height:1.15;text-align:center;color:#111;margin:0}
+.rs-contact{text-align:center;font-size:11.6px;color:#3a3a3a;line-height:1.75;margin-top:8px;word-break:break-word}
+.rs-contact a{color:#1a4fa0;text-decoration:none}
+.rs-contact a:hover{text-decoration:underline}
+.rs-contact .sep{color:#9a9a9a;padding:0 5px}
+.rs-h2{font-family:var(--font-serif);font-weight:700;font-size:clamp(14.5px,1.7vw,17px);letter-spacing:-.01em;color:#111;margin:26px 0 8px;padding-bottom:5px;border-bottom:1.5px solid #d8d5cd}
+.rs-summary{font-size:12.6px;line-height:1.62;color:#242424;text-align:justify}
+.rs-job{margin-top:15px}
+.rs-job:first-of-type{margin-top:4px}
+.rs-role{font-weight:700;font-size:13.2px;color:#111;line-height:1.3}
+.rs-org{font-size:12.4px;color:#3a3a3a;margin-top:1px}
+.rs-ul{list-style:none;padding:0;margin:7px 0 0}
+.rs-ul li{position:relative;padding-left:15px;margin-bottom:5px;font-size:12.3px;line-height:1.55;color:#242424;text-align:justify}
+.rs-ul li::before{content:"●";position:absolute;left:0;top:0;font-size:8px;line-height:1.95;color:#333}
+.rs-skills p{font-size:12.3px;line-height:1.6;color:#242424;margin:0 0 7px}
+.rs-edu{margin-top:11px}
+.rs-edu:first-of-type{margin-top:2px}
+.rs-edu b{display:block;font-weight:700;font-size:12.8px;color:#111}
+.rs-edu span{display:block;font-size:12.3px;color:#242424;line-height:1.55;margin-top:1px}
+.rs-pagemark{margin:30px 0 4px;text-align:center;font-size:11px;color:#9a9a9a;border-top:1px dashed var(--line);padding-top:12px}
+
+@media (max-width:640px){
+  .rs-paper{padding:22px 18px;border-radius:12px;font-size:12.6px}
+  .rs-ul li,.rs-summary,.rs-skills p{text-align:left}
+  .rs-actions{width:100%}
+  .rs-dl,.rs-print{flex:1;justify-content:center}
+}
+
+/* ---- print ---- */
+@media print{
+  .nav,.cta-footer,.rs-top,.rs-pagemark{display:none!important}
+  body{background:#fff}
+  .rs-page{padding:0}
+  .container{padding:0;max-width:none}
+  .rs-paper{box-shadow:none;border:0;border-radius:0;padding:0;max-width:none;font-size:10.5pt}
+  .rs-job,.rs-edu{break-inside:avoid}
+  .rs-h2{break-after:avoid}
+}

@@ -1,0 +1,88 @@
+/* ============================================
+   Concepts page — motion design showcase
+   ============================================ */
+.concepts-page{padding-top:24px;padding-bottom:24px}
+
+.cp-header{margin:18px 0 30px}
+.cp-header h1{font-family:var(--font-serif);font-weight:600;font-size:clamp(40px,7vw,88px);letter-spacing:-.025em;line-height:.95;margin:0 0 16px}
+.cp-header p{font-size:clamp(16px,1.8vw,19px);color:var(--ink-2);max-width:70ch;line-height:1.55}
+.cp-note{font-family:var(--font-script);font-size:clamp(20px,2.3vw,26px);color:var(--green-2);margin-top:18px;position:relative;padding-left:24px}
+.cp-note::before{content:"“";position:absolute;left:0;top:-2px;font-family:var(--font-script);font-size:clamp(28px,3vw,36px);color:var(--gold-2);line-height:1}
+
+.cp-meta{display:flex;gap:26px;flex-wrap:wrap;padding:18px 0;border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2);margin-bottom:28px;font-size:14px}
+.cp-meta .sm-l{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;color:var(--ink-3);text-transform:uppercase}
+.cp-meta .sm-v{font-weight:600;margin-top:4px}
+
+.cp-filter{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.cp-filter button{background:transparent;border:1px solid var(--line);padding:9px 20px;border-radius:999px;font-size:13.5px;font-weight:500;color:var(--ink-2);cursor:pointer;transition:all .15s ease;font-family:inherit}
+.cp-filter button:hover{color:var(--ink);border-color:var(--ink-4)}
+.cp-filter button.active{background:var(--gold-pill);border-color:var(--gold-pill);color:var(--ink);font-weight:600}
+
+/* ---- Grid ---- */
+.cp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.cp-card{display:flex;flex-direction:column;gap:12px;background:var(--surface-2);border:1px solid var(--line);border-radius:18px;padding:14px;opacity:0;transform:translateY(26px);transition:opacity .65s cubic-bezier(.2,.7,.2,1),transform .65s cubic-bezier(.2,.7,.2,1),border-color .2s ease,box-shadow .3s ease}
+.cp-card.in-view{opacity:1;transform:translateY(0)}
+.cp-card:hover{border-color:var(--gold);box-shadow:0 26px 44px -26px rgba(31,77,63,.3)}
+.cp-card.feature{grid-column:span 2}
+
+/* video stage */
+.cp-stage{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:16/9;background:var(--green-deep)}
+.cp-card.feature .cp-stage{aspect-ratio:32/13}
+.cp-bg{position:absolute;inset:0;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.cp-card:hover .cp-bg{transform:scale(1.06)}
+.cp-bg.g1{background:linear-gradient(135deg,#1f4d3f,#122e26)}
+.cp-bg.g2{background:linear-gradient(135deg,#163a30,#2e6b58)}
+.cp-bg.g3{background:linear-gradient(135deg,#161616,#2a2a2a)}
+.cp-bg.g4{background:linear-gradient(135deg,#cf9b20,#8a6710)}
+.cp-bg.g5{background:linear-gradient(135deg,#E16A4A,#8a3b25)}
+.cp-bg.g6{background:linear-gradient(135deg,#2e6b58,#5b9a85)}
+.cp-bg::after{content:"";position:absolute;right:-70px;bottom:-80px;width:250px;height:250px;border-radius:50%;background:var(--gold);opacity:.13}
+
+/* animated bars */
+.cp-bars{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);display:flex;gap:8px;padding:0 22px;opacity:.45;transition:opacity .4s ease}
+.cp-card:hover .cp-bars{opacity:.9}
+.cp-bars i{flex:1;height:46px;border-radius:7px;background:rgba(255,255,255,.15);animation:cpPulse 2.2s ease-in-out infinite;animation-play-state:paused}
+.cp-card:hover .cp-bars i{animation-play-state:running}
+.cp-bars i:nth-child(2){animation-delay:.15s}
+.cp-bars i:nth-child(3){animation-delay:.3s}
+.cp-bars i:nth-child(4){animation-delay:.45s}
+.cp-bars i:nth-child(5){animation-delay:.6s}
+.cp-bars i:nth-child(6){animation-delay:.75s}
+@keyframes cpPulse{0%,100%{transform:scaleY(.5);opacity:.5}50%{transform:scaleY(1);opacity:1}}
+
+.cp-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) scale(.8);width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.32);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);display:grid;place-items:center;opacity:0;transition:opacity .3s ease,transform .35s cubic-bezier(.2,.7,.2,1)}
+.cp-card:hover .cp-play{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.cp-play::after{content:"";width:0;height:0;border-left:14px solid #fff;border-top:8px solid transparent;border-bottom:8px solid transparent;margin-left:4px}
+
+.cp-badges{position:absolute;top:12px;left:12px;right:12px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.cp-kind{font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);background:rgba(0,0,0,.3);padding:4px 10px;border-radius:999px}
+.cp-dur{font-family:var(--font-mono);font-size:10.5px;color:#fff;background:rgba(0,0,0,.3);padding:4px 10px;border-radius:999px}
+.cp-scrub{position:absolute;left:0;right:0;bottom:0;height:3px;background:rgba(255,255,255,.16)}
+.cp-scrub i{display:block;height:100%;width:0;background:var(--gold);transition:width 3s linear}
+.cp-card:hover .cp-scrub i{width:100%}
+
+/* card meta */
+.cp-row{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.cp-title{font-size:16.5px;font-weight:600;line-height:1.25}
+.cp-client{font-size:12.5px;color:var(--ink-3);margin-top:3px}
+.cp-tags{display:flex;flex-wrap:wrap;gap:7px}
+.cp-tags .pill{font-size:11.5px;padding:5px 12px}
+
+/* ---- Toolkit strip ---- */
+.cp-toolkit{margin-top:56px;background:var(--green);color:#fff;border-radius:20px;padding:28px 30px}
+.cp-toolkit h3{font-family:var(--font-serif);font-weight:600;font-size:22px;margin:0 0 6px}
+.cp-toolkit p{font-size:14px;color:rgba(255,255,255,.78);margin:0 0 18px;max-width:70ch;line-height:1.55}
+.cp-tools{display:flex;gap:9px;flex-wrap:wrap}
+.cp-tools span{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);padding:8px 16px;border-radius:999px;font-size:13px}
+
+@media (max-width:1024px){
+  .cp-grid{grid-template-columns:repeat(2,1fr)}
+  .cp-card.feature{grid-column:span 2}
+  .cp-card.feature .cp-stage{aspect-ratio:16/9}
+}
+@media (max-width:640px){
+  .cp-grid{grid-template-columns:1fr;gap:16px}
+  .cp-card.feature{grid-column:span 1}
+  .cp-meta{gap:18px}
+  .cp-toolkit{padding:22px 20px}
+}

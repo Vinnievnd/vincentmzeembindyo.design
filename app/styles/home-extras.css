@@ -1,0 +1,74 @@
+/* ============================================
+   Home additions: disciplines, quotes, concepts
+   ============================================ */
+
+/* ---- Hero additions ---- */
+.hero-standfirst{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.hero-standfirst .pill{font-size:12.5px}
+.markets{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:26px;padding-top:20px;border-top:1px solid var(--line-2);font-size:14px;color:var(--ink-2)}
+.markets .m-l{font-family:var(--font-mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3)}
+.markets .m-v{display:flex;gap:8px;flex-wrap:wrap}
+.markets .m-v span{background:var(--surface);border:1px solid var(--line);padding:5px 13px;border-radius:999px;font-size:13px}
+
+/* ---- Disciplines band ---- */
+.disciplines{padding-top:clamp(52px,7vw,88px)}
+.disc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+.disc-card{background:var(--surface-2);border:1px solid var(--line);border-radius:16px;padding:22px 20px;display:flex;flex-direction:column;gap:8px;transition:transform .25s ease,border-color .2s ease,box-shadow .25s ease}
+.disc-card:hover{transform:translateY(-4px);border-color:var(--gold);box-shadow:0 20px 36px -22px rgba(31,77,63,.22)}
+.disc-num{font-family:var(--font-mono);font-size:11px;letter-spacing:.09em;color:var(--gold-2)}
+.disc-h{font-family:var(--font-serif);font-weight:600;font-size:19px;letter-spacing:-.01em}
+.disc-p{font-size:13.5px;color:var(--ink-2);line-height:1.55}
+.disc-metric{margin-top:auto;padding-top:12px;font-family:var(--font-mono);font-size:11.5px;color:var(--green-2);font-weight:500}
+
+/* ---- Work experience quote (curly script) ---- */
+.work-row{position:relative}
+.work-quote{grid-column:1 / -1;font-family:var(--font-script);font-size:clamp(19px,2.2vw,25px);line-height:1.35;color:var(--green-2);margin-top:12px;padding-left:24px;position:relative;max-width:62ch;text-wrap:pretty}
+.work-quote::before{content:"“";position:absolute;left:0;top:-2px;font-family:var(--font-script);font-size:clamp(28px,3vw,36px);color:var(--gold-2);line-height:1}
+.work-row:hover .work-quote{color:var(--green)}
+
+/* ---- Concepts (motion) section ---- */
+.concepts{padding-top:clamp(56px,8vw,96px)}
+.concepts .lead{margin-top:16px}
+.concept-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:32px}
+.concept-card{position:relative;display:block;border-radius:18px;overflow:hidden;background:var(--green-deep);aspect-ratio:16/9;opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1),box-shadow .3s ease}
+.concept-card.in-view{opacity:1;transform:translateY(0)}
+.concept-card:hover{box-shadow:0 30px 56px -28px rgba(18,46,38,.55)}
+.concept-card .cc-art{position:absolute;inset:0;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.concept-card:hover .cc-art{transform:scale(1.05)}
+.cc-art.a1{background:linear-gradient(135deg,#1f4d3f,#122e26)}
+.cc-art.a2{background:linear-gradient(135deg,#163a30,#2e6b58)}
+.cc-art.a3{background:linear-gradient(135deg,#161616,#2a2a2a)}
+.cc-art.a4{background:linear-gradient(135deg,#cf9b20,#8a6710)}
+.cc-art::after{content:"";position:absolute;right:-60px;bottom:-70px;width:240px;height:240px;border-radius:50%;background:var(--gold);opacity:.14}
+
+/* faux motion strip inside card */
+.cc-strip{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);display:flex;gap:10px;padding:0 26px;opacity:.5;transition:opacity .4s ease}
+.concept-card:hover .cc-strip{opacity:.85}
+.cc-strip i{display:block;flex:1;height:54px;border-radius:8px;background:rgba(255,255,255,.14);animation:ccPulse 2.4s ease-in-out infinite}
+.cc-strip i:nth-child(2){animation-delay:.2s}
+.cc-strip i:nth-child(3){animation-delay:.4s}
+.cc-strip i:nth-child(4){animation-delay:.6s}
+.cc-strip i:nth-child(5){animation-delay:.8s}
+@keyframes ccPulse{0%,100%{transform:scaleY(.55);opacity:.5}50%{transform:scaleY(1);opacity:1}}
+.concept-card:not(:hover) .cc-strip i{animation-play-state:paused}
+
+.cc-body{position:absolute;inset:0;padding:24px 26px;display:flex;flex-direction:column;justify-content:space-between;color:#fff}
+.cc-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.cc-kind{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.cc-dur{font-family:var(--font-mono);font-size:11px;color:rgba(255,255,255,.7);background:rgba(255,255,255,.1);padding:4px 10px;border-radius:999px}
+.cc-h{font-family:var(--font-serif);font-weight:600;font-size:clamp(20px,2.4vw,27px);line-height:1.1;letter-spacing:-.02em;text-wrap:pretty}
+.cc-sub{font-size:13px;color:rgba(255,255,255,.75);margin-top:6px;max-width:44ch}
+.cc-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) scale(.82);width:62px;height:62px;border-radius:50%;background:rgba(255,255,255,.14);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.3);display:grid;place-items:center;opacity:0;transition:opacity .3s ease,transform .35s cubic-bezier(.2,.7,.2,1)}
+.concept-card:hover .cc-play{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.cc-play::after{content:"";width:0;height:0;border-left:15px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px}
+.cc-scrub{position:absolute;left:0;right:0;bottom:0;height:3px;background:rgba(255,255,255,.16)}
+.cc-scrub i{display:block;height:100%;width:0;background:var(--gold);transition:width 3.2s linear}
+.concept-card:hover .cc-scrub i{width:100%}
+
+@media (max-width:1024px){.disc-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){
+  .disc-grid{grid-template-columns:1fr}
+  .concept-grid{grid-template-columns:1fr;gap:16px}
+  .markets{flex-direction:column;align-items:flex-start;gap:10px}
+  .work-quote{padding-left:20px}
+}

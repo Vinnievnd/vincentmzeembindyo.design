@@ -1,0 +1,26 @@
+/* ============================================
+   Global motion: load-in + scroll reveal
+   Smooth ease-in-out, reduced-motion aware
+   ============================================ */
+:root{--ease-smooth:cubic-bezier(.42,0,.58,1);--ease-out-soft:cubic-bezier(.22,.61,.36,1);--rv-dur:.72s}
+
+/* ---- Load-in (nav + hero) ---- */
+.motion .nav{opacity:0;transform:translateY(-14px);transition:opacity .6s var(--ease-smooth),transform .6s var(--ease-smooth)}
+.motion.motion-ready .nav{opacity:1;transform:none}
+.motion [data-load]{opacity:0;transform:translateY(20px);transition:opacity .8s var(--ease-smooth),transform .8s var(--ease-smooth)}
+.motion.motion-ready [data-load]{opacity:1;transform:none}
+
+/* ---- Scroll reveal ---- */
+.motion .rv{opacity:0;transform:translateY(26px);transition:opacity var(--rv-dur) var(--ease-smooth),transform var(--rv-dur) var(--ease-smooth)}
+.motion .rv.is-in{opacity:1;transform:none}
+/* heading variant: slightly larger lift */
+.motion .rv-h{transform:translateY(32px)}
+/* card grids stagger set inline by motion.js */
+
+/* ---- Hover polish (site-wide easing consistency) ---- */
+.project-card,.info-card,.three-card,.rcard,.iacard,.wf-card,.ma-card,.disc-card,.oc-card,.lf-card,.pf-card,.cp-card,.concept-card,.istat.lift,.user-row,.dchip{transition-timing-function:var(--ease-out-soft)!important}
+
+@media (prefers-reduced-motion: reduce){
+  .motion .nav,.motion [data-load],.motion .rv{opacity:1!important;transform:none!important;transition:none!important}
+  .cc-strip i,.cp-bars i{animation:none!important}
+}
