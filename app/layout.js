@@ -1,5 +1,8 @@
 import { Plus_Jakarta_Sans, Source_Serif_4, JetBrains_Mono, Caveat } from "next/font/google";
 import "./globals.css";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -36,7 +39,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${plusJakartaSans.variable} ${sourceSerif4.variable} ${jetBrainsMono.variable} ${caveat.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Nav />
+        {children}
+        <Footer />
+        <ScrollReveal />
+      </body>
     </html>
   );
 }
