@@ -14,7 +14,7 @@ inventory, design tokens, and interaction map.
 ## Goals
 
 - Move the site to a real Next.js app, deployed on Vercel.
-- Reduce duplication across the 8 case studies and 5 brand-identity pages by
+- Reduce duplication across the 9 case studies and 5 brand-identity pages by
   extracting shared, reusable components instead of copy-pasted markup.
 - Lay a foundation that can grow dynamic features later (contact form
   backend, CMS-driven content, API routes) without another rewrite.
