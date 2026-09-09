@@ -9,17 +9,19 @@ export default function BeforeAfterCompare({ frames, defaultActive, children }) 
   return (
     <CompareContext.Provider value={{ active }}>
       <div className="cmp">
-        {frames.map((f) => (
-          <button
-            key={f.id}
-            type="button"
-            className={f.id === active ? "cmp-btn active" : "cmp-btn"}
-            onClick={() => setActive(f.id)}
-          >
-            {f.label}
-          </button>
-        ))}
-        {children}
+        <div className="cmp-toggle" role="tablist">
+          {frames.map((f) => (
+            <button
+              key={f.id}
+              type="button"
+              className={f.id === active ? "cmp-btn active" : "cmp-btn"}
+              onClick={() => setActive(f.id)}
+            >
+              {f.label}
+            </button>
+          ))}
+        </div>
+        <div className="cmp-stage">{children}</div>
       </div>
     </CompareContext.Provider>
   );

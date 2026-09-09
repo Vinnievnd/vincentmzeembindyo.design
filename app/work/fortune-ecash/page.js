@@ -8,6 +8,7 @@ import TabGroup from "@/components/TabGroup";
 import ThemeToggle from "@/components/ThemeToggle";
 import PrototypeDock from "@/components/PrototypeDock";
 import BeforeAfterCompare from "@/components/BeforeAfterCompare";
+import { useBodyAttribute } from "@/lib/useBodyClass";
 
 const MODALS = {
   // Project Info
@@ -223,6 +224,8 @@ const DEVICE_COPY = {
 };
 
 export default function FortuneECashPage() {
+  useBodyAttribute("data-screen-label", "Fortune eCash Project v2");
+
   return (
     <ModalProvider modals={MODALS}>
       <main className="container project-page">
