@@ -147,7 +147,7 @@ export default function EverythingRiriPage() {
                 <div><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" d="M8 5.5 5 11h5M16 5.5 19 11h-5M12 20.5 9 15h6z"/><path fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" d="M5 11l-1.2 3M19 11l1.2 3"/></svg><span>Refill</span></div>
                 <div><svg viewBox="0 0 24 24" aria-hidden="true"><circle fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" cx="12" cy="12" r="8"/><path fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" d="m8.5 12 2.5 2.5 4.5-5"/></svg><span>Certified</span></div>
               </div>
-              <p className="bx-p">Eight glyphs on a 24 px grid at a single 1.5 px stroke, sharing the wordmark&apos;s rounded terminals. Always paired with a label, including the regulatory symbols on-pack.</p>
+              <p className="bx-p">Eight glyphs on a 24 px grid at a single 1.5 px stroke, sharing the wordmark’s rounded terminals. Always paired with a label, including the regulatory symbols on-pack.</p>
             </div>
             <div className="bx c3">
               <div className="bx-h"><span>08 · Pattern</span></div>
