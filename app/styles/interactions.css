@@ -6,8 +6,8 @@
 .case-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
 .case-pill {
   font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: .05em;
+  font-size: var(--fs-label);
+  letter-spacing: var(--ls-label);
   background: var(--green);
   color: var(--gold);
   padding: 5px 12px;
@@ -29,15 +29,16 @@
 }
 .kicker-num {
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: var(--fs-label);
   color: var(--gold-2);
-  letter-spacing: .05em;
+  letter-spacing: var(--ls-label);
 }
 .kicker-title {
   font-family: var(--font-serif);
   font-weight: 600;
-  font-size: clamp(24px, 3.6vw, 40px);
-  letter-spacing: -0.02em;
+  font-size: var(--fs-subsection);
+  line-height: var(--lh-subsection);
+  letter-spacing: var(--ls-subsection);
   margin: 0;
 }
 

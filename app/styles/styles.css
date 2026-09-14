@@ -27,6 +27,36 @@
   --font-sans: var(--font-sans), sans-serif;
   --font-mono: var(--font-mono), monospace;
   --font-script: var(--font-caveat), cursive;
+
+  /* ---- Type scale (desktop, >=1025px) ---- */
+  --fs-page-title: 92px;      --lh-page-title: .95;    --ls-page-title: -.028em;
+  --fs-section-heading: 52px; --lh-section-heading: 1.02; --ls-section-heading: -.022em;
+  --fs-subsection: 34px;      --lh-subsection: 1.1;    --ls-subsection: -.02em;
+  --fs-card-heading: 22px;    --lh-card-heading: 1.12; --ls-card-heading: -.015em;
+  --fs-lead: 20px;            --lh-lead: 1.55;
+  --fs-base: 16px;            --lh-base: 1.5;
+  --fs-card-copy: 14.5px;     --lh-card-copy: 1.6;
+  --fs-meta: 13px;            --lh-meta: 1.45;
+  --fs-eyebrow: 11.5px;       --ls-eyebrow: .14em;
+  --fs-label: 10.5px;         --ls-label: .08em;
+}
+@media (max-width: 1024px) {
+  :root {
+    --fs-page-title: 60px;
+    --fs-section-heading: 38px;
+    --fs-subsection: 27px;
+    --fs-card-heading: 20px;
+    --fs-lead: 18px;
+  }
+}
+@media (max-width: 640px) {
+  :root {
+    --fs-page-title: 42px;
+    --fs-section-heading: 30px;
+    --fs-subsection: 23px;
+    --fs-card-heading: 18px;
+    --fs-lead: 17px;
+  }
 }
 
 * { box-sizing: border-box; }
@@ -35,8 +65,8 @@ body {
   font-family: var(--font-sans);
   color: var(--ink);
   background: var(--bg);
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: var(--fs-base);
+  line-height: var(--lh-base);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -109,31 +139,61 @@ button { font-family: inherit; cursor: pointer; }
 .nav-toggle span::after { top: 6px; }
 
 /* ========== Headings ========== */
-h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 600; letter-spacing: -0.015em; margin: 0; }
+/* Type-scale roles: h1 page title · h2 section heading · h3 subsection · h4 card heading */
+h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 600; margin: 0; }
+h1 { font-size: var(--fs-page-title); line-height: var(--lh-page-title); letter-spacing: var(--ls-page-title); }
+h2 { font-size: var(--fs-section-heading); line-height: var(--lh-section-heading); letter-spacing: var(--ls-section-heading); }
+h3 { font-size: var(--fs-subsection); line-height: var(--lh-subsection); letter-spacing: var(--ls-subsection); }
+h4 { font-size: var(--fs-card-heading); line-height: var(--lh-card-heading); letter-spacing: var(--ls-card-heading); }
 .h-hero {
-  font-size: clamp(46px, 9.5vw, 132px);
-  line-height: 0.95;
-  letter-spacing: -0.025em;
+  font-size: var(--fs-page-title);
+  line-height: var(--lh-page-title);
+  letter-spacing: var(--ls-page-title);
 }
 .h-section {
-  font-size: clamp(34px, 5.5vw, 64px);
-  line-height: 1.02;
+  font-size: var(--fs-section-heading);
+  line-height: var(--lh-section-heading);
+  letter-spacing: var(--ls-section-heading);
+}
+.h-subsection {
+  font-size: var(--fs-subsection);
+  line-height: var(--lh-subsection);
+  letter-spacing: var(--ls-subsection);
 }
 .h-block {
-  font-size: clamp(20px, 2.3vw, 26px);
-  line-height: 1.2;
+  font-size: var(--fs-card-heading);
+  line-height: var(--lh-card-heading);
+  letter-spacing: var(--ls-card-heading);
 }
 .lead {
-  font-size: clamp(16px, 1.8vw, 19px);
+  font-family: var(--font-sans);
+  font-size: var(--fs-lead);
+  line-height: var(--lh-lead);
   color: var(--ink-2);
   max-width: 60ch;
-  line-height: 1.55;
 }
 .eyebrow {
-  font-size: 13px;
-  letter-spacing: 0.04em;
+  font-family: var(--font-mono);
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--ls-eyebrow);
   color: var(--ink-2);
-  font-weight: 600;
+  font-weight: 500;
+}
+.meta {
+  font-family: var(--font-sans);
+  font-size: var(--fs-meta);
+  line-height: var(--lh-meta);
+  color: var(--ink-2);
+}
+.card-copy {
+  font-family: var(--font-sans);
+  font-size: var(--fs-card-copy);
+  line-height: var(--lh-card-copy);
+}
+.label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  letter-spacing: var(--ls-label);
 }
 
 /* ========== Pills / tags ========== */

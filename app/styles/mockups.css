@@ -5,17 +5,17 @@
 .h-block-title {
   font-family: var(--font-serif);
   font-weight: 600;
-  font-size: clamp(28px, 4.6vw, 54px);
-  line-height: 1.05;
-  letter-spacing: -0.02em;
+  font-size: var(--fs-page-title);
+  line-height: var(--lh-page-title);
+  letter-spacing: var(--ls-page-title);
   margin-bottom: 10px;
 }
 .proj-tagline {
-  font-size: clamp(14.5px, 1.6vw, 17px);
+  font-size: var(--fs-lead);
+  line-height: var(--lh-lead);
   color: var(--ink-2);
   max-width: 70ch;
   margin-bottom: 20px;
-  line-height: 1.55;
 }
 .proj-tags {
   display: flex; flex-wrap: wrap; gap: 8px;

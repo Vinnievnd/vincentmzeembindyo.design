@@ -22,7 +22,7 @@
 
 /* ---- Work experience quote (curly script) ---- */
 .work-row{position:relative}
-.work-quote{grid-column:1 / -1;font-family:var(--font-script);font-size:clamp(19px,2.2vw,25px);line-height:1.35;color:var(--green-2);margin-top:12px;padding-left:24px;position:relative;max-width:62ch;text-wrap:pretty}
+.work-quote{grid-column:1 / -1;font-family:var(--font-script);font-weight:500;font-size:clamp(19px,2.2vw,25px);line-height:1.35;color:var(--green-2);margin-top:12px;padding-left:24px;position:relative;max-width:62ch;text-wrap:pretty}
 .work-quote::before{content:"“";position:absolute;left:0;top:-2px;font-family:var(--font-script);font-size:clamp(28px,3vw,36px);color:var(--gold-2);line-height:1}
 .work-row:hover .work-quote{color:var(--green)}
 
