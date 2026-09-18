@@ -145,6 +145,18 @@
 .phone-frame-inline.small .ph-screen,
 .phone-frame-inline .ph-screen.small { font-size: 8px; padding: 20px 8px 8px; }
 
+/* --- Real screenshot hero phones: the PNG itself is already a complete
+   device mockup (frame, notch/camera, rounded corners all baked in by
+   the design tool), so there's no .phone-frame-inline/.ph-notch wrapper
+   here — just the image, sized to fill its grid cell. --- */
+.hero-phone-shot img { width: 100%; height: auto; display: block; filter: drop-shadow(0 12px 20px rgba(0,0,0,.28)); }
+
+/* --- Hero grids of real screenshots (vs. the coded fake-UI hero grids
+   elsewhere) skip the alternating Y-stagger so every phone lines up
+   flush at the top. Scoped to .shots-grid so other case studies' fake-UI
+   hero mockups keep their staggered look. --- */
+.hero-mockup-grid.shots-grid .hero-phone { transform: none !important; }
+
 /* --- Onboarding screen --- */
 .ph-screen-onboarding { background: linear-gradient(180deg, #fff 0%, #ffd76a 50%, #fff 100%); padding: 22px 14px 14px; }
 .ob-bg { position: absolute; inset: 0; background: radial-gradient(circle at 50% 80%, rgba(0,0,0,.05), transparent 60%); }

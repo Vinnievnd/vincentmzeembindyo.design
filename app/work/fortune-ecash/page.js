@@ -254,93 +254,18 @@ export default function FortuneECashPage() {
 
         {/* Hero mockup ribbon */}
         <section className="hero-mockup" aria-label="Mockup videos and GIFs">
-          <div className="hero-mockup-grid">
-            <div className="hero-phone phone-screen phone-onboarding">
-              <div className="phone-frame-inline">
-                <div className="ph-notch"></div>
-                <div className="ph-screen ph-screen-onboarding">
-                  <div className="ob-bg"></div>
-                  <div className="ob-content">
-                    <div className="ob-logo">F</div>
-                    <div className="ob-title">Mwelekeo<br />Account</div>
-                    <div className="ob-tag">take part, take<br />charge of your future<br />with our mwelekeo account</div>
-                  </div>
-                  <div className="ob-cta">Get Started today</div>
-                  <div className="ob-cta ghost">Login to platform</div>
-                </div>
-              </div>
+          <div className="hero-mockup-grid shots-grid">
+            <div className="hero-phone hero-phone-shot phone-screen phone-onboarding">
+              <img src="/work/fortune-ecash/intro.png" alt="Fortune eCash onboarding screen — Mwelekeo Account" />
             </div>
-            <div className="hero-phone phone-screen phone-home">
-              <div className="phone-frame-inline">
-                <div className="ph-notch"></div>
-                <div className="ph-screen ph-screen-home">
-                  <div className="h-header">
-                    <div>
-                      <div className="h-greet">Morning Lo</div>
-                      <div className="h-greet-bold">Welcome back</div>
-                    </div>
-                    <div className="h-logo">F</div>
-                  </div>
-                  <div className="h-account">
-                    <div className="h-acct-label">Lengo Savings Account</div>
-                    <div className="h-acct-num">10** **** **** *26</div>
-                  </div>
-                  <div className="h-actions">
-                    <div className="h-act"><span>👁</span>View<br />Balance</div>
-                    <div className="h-act"><span>▶</span>Deposit<br />to Account</div>
-                    <div className="h-act"><span>▤</span>Mini<br />Statement</div>
-                    <div className="h-act"><span>▦</span>Full<br />Statement</div>
-                  </div>
-                  <div className="h-grid">
-                    <div className="h-tile" style={{ background: '#e7f0ff' }}><div className="h-tile-ico" style={{ background: '#5b86d6' }}></div><div>Buy<br />Airtime</div></div>
-                    <div className="h-tile" style={{ background: '#e7fff3' }}><div className="h-tile-ico" style={{ background: '#27a55a' }}></div><div>Send<br />Money</div></div>
-                    <div className="h-tile" style={{ background: '#ffe7ec' }}><div className="h-tile-ico" style={{ background: '#e16a86' }}></div><div>Pay<br />Bill</div></div>
-                    <div className="h-tile" style={{ background: '#f1e7ff' }}><div className="h-tile-ico" style={{ background: '#8a5bd6' }}></div><div>Buy<br />Goods</div></div>
-                  </div>
-                  <div className="h-listrow"><span className="dot dot-mpesa"></span><div><div>MPESA</div><small>23925</small></div><div className="amt red">-KES 50,000.00</div></div>
-                  <div className="h-listrow"><span className="dot dot-dep"></span><div><div>Deposit</div></div><div className="amt green">+KES 1,200,000.00</div></div>
-                  <div className="h-listrow"><span className="dot dot-with"></span><div><div>Withdraw</div></div><div className="amt red">-KES 50,000.00</div></div>
-                </div>
-              </div>
+            <div className="hero-phone hero-phone-shot phone-screen phone-home">
+              <img src="/work/fortune-ecash/home.png" alt="Fortune eCash home screen — account overview and quick actions" />
             </div>
-            <div className="hero-phone phone-screen phone-send">
-              <div className="phone-frame-inline">
-                <div className="ph-notch"></div>
-                <div className="ph-screen ph-screen-send">
-                  <div className="s-top"><div className="s-back">‹</div><div className="s-title">Send Money</div></div>
-                  <div className="s-from"><div className="s-from-label">From</div><div className="s-from-acct">Lengo Savings · KES 1,250,400</div></div>
-                  <div className="s-recipient"><div className="s-recip-label">Recipient</div><div className="s-recip-num">+254 712 ••• 982</div><div className="s-recip-name">JANE WANJIRU M.</div></div>
-                  <div className="s-amount"><div className="s-amount-currency">KES</div><div className="s-amount-value">125,000</div></div>
-                  <div className="s-keypad">
-                    <span>1</span><span>2</span><span>3</span>
-                    <span>4</span><span>5</span><span>6</span>
-                    <span>7</span><span>8</span><span>9</span>
-                    <span>.</span><span>0</span><span>⌫</span>
-                  </div>
-                  <div className="s-cta">Confirm Transfer</div>
-                </div>
-              </div>
+            <div className="hero-phone hero-phone-shot phone-screen phone-send">
+              <img src="/work/fortune-ecash/loans.png" alt="Fortune eCash loans screen — short term loan account detail" />
             </div>
-            <div className="hero-phone phone-screen phone-loan">
-              <div className="phone-frame-inline">
-                <div className="ph-notch"></div>
-                <div className="ph-screen ph-screen-loan">
-                  <div className="ln-top"><div className="s-back">‹</div><div className="s-title">Loan Application</div></div>
-                  <div className="ln-stepper">
-                    <span className="dot on"></span><span className="bar on"></span>
-                    <span className="dot on"></span><span className="bar"></span>
-                    <span className="dot"></span>
-                  </div>
-                  <div className="ln-amount-label">Amount eligible</div>
-                  <div className="ln-amount">KES 250,000</div>
-                  <div className="ln-slider"><div className="ln-slider-fill"></div><div className="ln-slider-thumb"></div></div>
-                  <div className="ln-row"><span>Repayment</span><span className="bold">12 months</span></div>
-                  <div className="ln-row"><span>Interest</span><span className="bold">9.5% p.a.</span></div>
-                  <div className="ln-row"><span>Monthly</span><span className="bold">KES 22,800</span></div>
-                  <div className="ln-disclosure">By tapping Continue you accept the Loan Terms &amp; Conditions and authorise CRB verification.</div>
-                  <div className="ln-cta">Continue</div>
-                </div>
-              </div>
+            <div className="hero-phone hero-phone-shot phone-screen phone-loan">
+              <img src="/work/fortune-ecash/paybills.png" alt="Fortune eCash paybills screen — utilities list" />
             </div>
           </div>
           <PrototypeDock>

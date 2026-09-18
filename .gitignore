@@ -39,6 +39,10 @@ yarn-error.log*
 # claude code worktrees (local tooling state, not project source)
 /.claude/
 
+# raw asset drop-off (originals get resized into public/ before use;
+# not meant to ship in the repo)
+/assets/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

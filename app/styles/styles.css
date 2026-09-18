@@ -23,9 +23,13 @@
   --radius-lg: 22px;
   --container: 1240px;
   --pad: clamp(20px, 4vw, 56px);
-  --font-serif: var(--font-serif), serif;
-  --font-sans: var(--font-sans), sans-serif;
-  --font-mono: var(--font-mono), monospace;
+  /* --font-serif/--font-sans/--font-mono are set directly on <html> by
+     next/font's .variable classes in app/layout.js (already include a
+     fallback) — redeclaring them here as "var(--font-sans), sans-serif"
+     was a self-reference (cyclic var()), which CSS treats as invalid,
+     so it silently dropped every font-family down to the browser
+     default serif. Only --font-script needs mapping, since its target
+     name differs from next/font's --font-caveat. */
   --font-script: var(--font-caveat), cursive;
 
   /* ---- Type scale (desktop, >=1025px) ---- */
