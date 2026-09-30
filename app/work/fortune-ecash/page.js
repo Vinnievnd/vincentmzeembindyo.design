@@ -773,68 +773,26 @@ export default function FortuneECashPage() {
           <div className="wireframe-grid">
             <ModalTrigger modalKey="m-lofi" className="wf-card clickable">
               <div className="wf-label">v0 Lo-Fi</div>
-              <div className="phone-frame-inline small">
-                <div className="ph-notch"></div>
-                <div className="ph-screen lofi">
-                  <div className="lo-row"></div>
-                  <div className="lo-row tall"></div>
-                  <div className="lo-row"></div>
-                  <div className="lo-grid">
-                    <div className="lo-box"></div><div className="lo-box"></div>
-                    <div className="lo-box"></div><div className="lo-box"></div>
-                  </div>
-                  <div className="lo-row"></div>
-                  <div className="lo-row"></div>
-                  <div className="lo-row"></div>
-                </div>
+              <div className="wf-card-shot">
+                <img src="/work/fortune-ecash/v0-lofi.png" alt="v0 Lo-Fi homescreen mockup" />
               </div>
             </ModalTrigger>
             <ModalTrigger modalKey="m-hifi-v0" className="wf-card clickable">
               <div className="wf-label">v0 Hi-Fi</div>
-              <div className="phone-frame-inline small">
-                <div className="ph-notch"></div>
-                <div className="ph-screen hifi-v0">
-                  <div className="hf-top"><div><div className="hf-greet">Good morning</div><div className="hf-greet-bold">Joseph</div></div><div className="hf-logo">F</div></div>
-                  <div className="hf-balance"><div>Lengo Savings</div><div className="hf-amt">KES 250,400</div></div>
-                  <div className="hf-tabs"><span className="on">View</span><span>Deposit</span><span>Mini</span><span>Full</span></div>
-                  <div className="hf-grid"><div></div><div></div><div></div><div></div></div>
-                </div>
+              <div className="wf-card-shot">
+                <img src="/work/fortune-ecash/v0-hifi.png" alt="v0 Hi-Fi homescreen mockup" />
               </div>
             </ModalTrigger>
             <ModalTrigger modalKey="m-hifi-v1" className="wf-card clickable">
               <div className="wf-label">v1 Hi-Fi</div>
-              <div className="phone-frame-inline small">
-                <div className="ph-notch"></div>
-                <div className="ph-screen hifi-v1">
-                  <div className="hf-top"><div><div className="hf-greet">Hujambo,</div><div className="hf-greet-bold">Wanjiru</div></div><div className="hf-logo green">F</div></div>
-                  <div className="hf-balance green"><div>Lengo · Active</div><div className="hf-amt">KES 1,250,400</div></div>
-                  <div className="hf-actions-row"><div className="hf-act">Send</div><div className="hf-act">Save</div><div className="hf-act">Loan</div><div className="hf-act">Pay</div></div>
-                  <div className="hf-list">
-                    <div className="hf-li"><span></span><div></div></div>
-                    <div className="hf-li"><span></span><div></div></div>
-                    <div className="hf-li"><span></span><div></div></div>
-                  </div>
-                </div>
+              <div className="wf-card-shot">
+                <img src="/work/fortune-ecash/v1-hifi.png" alt="v1 Hi-Fi homescreen mockup, Material 3 A/B test" />
               </div>
             </ModalTrigger>
             <ModalTrigger modalKey="m-hifi-v2" className="wf-card clickable">
               <div className="wf-label">v2 Hi-Fi <span className="ship-chip">Shipped</span></div>
-              <div className="phone-frame-inline small">
-                <div className="ph-notch"></div>
-                <div className="ph-screen hifi-v2">
-                  <div className="hf-top"><div><div className="hf-greet">Welcome back</div><div className="hf-greet-bold">Wanjiru</div></div><div className="hf-logo green">F</div></div>
-                  <div className="hf-balance hero-green">
-                    <div className="dim">Lengo Savings · ****26</div>
-                    <div className="hf-amt big">KES 1,250,400</div>
-                    <div className="hf-trend">▲ +KES 12,800 this week</div>
-                  </div>
-                  <div className="hf-grid four chip">
-                    <div className="chip-tile"><div className="c-ico c1"></div>Send</div>
-                    <div className="chip-tile"><div className="c-ico c2"></div>Save</div>
-                    <div className="chip-tile"><div className="c-ico c3"></div>Loan</div>
-                    <div className="chip-tile"><div className="c-ico c4"></div>Pay</div>
-                  </div>
-                </div>
+              <div className="wf-card-shot">
+                <img src="/work/fortune-ecash/v2-hifi.png" alt="v2 Hi-Fi homescreen mockup, Material 3 A/B test" />
               </div>
             </ModalTrigger>
           </div>
@@ -844,28 +802,8 @@ export default function FortuneECashPage() {
               <div className="wf-label">Fortune eCash Website</div>
               <div className="browser-frame">
                 <div className="bf-bar"><span></span><span></span><span></span><div className="bf-url">fortunesacco.co.ke</div></div>
-                <div className="bf-body site">
-                  <div className="site-nav">
-                    <div className="site-logo">F · Fortune</div>
-                    <div className="site-links"><span>Home</span><span>Products</span><span>Loans</span><span>About</span><span className="cta">Open Account</span></div>
-                  </div>
-                  <div className="site-hero">
-                    <div>
-                      <div className="site-eyebrow">MWELEKEO · 2026</div>
-                      <div className="site-h1">Banking that<br />moves with you.</div>
-                      <div className="site-sub">Open a Lengo Savings Account in three steps. Save, send, borrow from any phone.</div>
-                      <div className="site-ctas"><span className="cta">Get the App</span><span className="cta ghost">Talk to us</span></div>
-                    </div>
-                    <div className="site-hero-art">
-                      <div className="phone-frame-inline tiny"><div className="ph-notch"></div><div className="ph-screen tiny-screen"></div></div>
-                    </div>
-                  </div>
-                  <div className="site-feats">
-                    <div className="site-feat"><div className="ff"></div><span>P2P Transfers</span></div>
-                    <div className="site-feat"><div className="ff"></div><span>Instant Loans</span></div>
-                    <div className="site-feat"><div className="ff"></div><span>Savings Goals</span></div>
-                    <div className="site-feat"><div className="ff"></div><span>Branch Lite</span></div>
-                  </div>
+                <div className="bf-shot">
+                  <img src="/work/fortune-ecash/ecash-website.png" alt="Fortune eCash marketing website" />
                 </div>
               </div>
             </div>
@@ -873,30 +811,19 @@ export default function FortuneECashPage() {
               <div className="wf-label">Admin Dashboard</div>
               <div className="browser-frame">
                 <div className="bf-bar"><span></span><span></span><span></span><div className="bf-url">admin.fortunesacco.co.ke</div></div>
-                <div className="bf-body dash">
-                  <aside className="dash-side">
-                    <div className="dash-logo">F</div>
-                    <div className="dash-nav"><span className="on">Overview</span><span>Tickets</span><span>Members</span><span>Loans</span><span>Reports</span></div>
-                  </aside>
-                  <main className="dash-main">
-                    <div className="dash-cards">
-                      <div className="dash-stat"><div className="ds-l">Open Tickets</div><div className="ds-n">214</div><div className="ds-d up">+12%</div></div>
-                      <div className="dash-stat"><div className="ds-l">Approvals</div><div className="ds-n">88</div><div className="ds-d up">+4%</div></div>
-                      <div className="dash-stat"><div className="ds-l">SLA</div><div className="ds-n">94%</div><div className="ds-d down">-2%</div></div>
-                    </div>
-                    <div className="dash-chart">
-                      <svg viewBox="0 0 300 80" preserveAspectRatio="none">
-                        <polyline points="0,60 30,50 60,55 90,30 120,40 150,20 180,30 210,15 240,25 270,12 300,20" stroke="#1f4d3f" strokeWidth="2" fill="none"/>
-                        <polyline points="0,70 30,65 60,60 90,55 120,52 150,45 180,42 210,38 240,32 270,30 300,25" stroke="#e5b33a" strokeWidth="2" fill="none" strokeDasharray="3,3"/>
-                      </svg>
-                    </div>
-                    <div className="dash-table">
-                      <div className="dt-row dt-head"><span>Ticket</span><span>Member</span><span>Status</span><span>SLA</span></div>
-                      <div className="dt-row"><span>#FT-2841</span><span>J. Wanjiru</span><span className="dt-on">Open</span><span>1h 42m</span></div>
-                      <div className="dt-row"><span>#FT-2839</span><span>P. Maina</span><span className="dt-resolved">Resolved</span><span>—</span></div>
-                      <div className="dt-row"><span>#FT-2836</span><span>R. Mwende</span><span className="dt-pending">Pending</span><span>3h 12m</span></div>
-                    </div>
-                  </main>
+                <div className="dash-toggle">
+                  <input type="radio" name="dashView" id="dashHome" defaultChecked />
+                  <input type="radio" name="dashView" id="dashTxns" />
+                  <div className="dash-tabs">
+                    <label htmlFor="dashHome" className="dash-tab">Home</label>
+                    <label htmlFor="dashTxns" className="dash-tab">Transactions</label>
+                  </div>
+                  <div className="dash-pane home bf-shot">
+                    <img src="/work/fortune-ecash/dashboard-home.png" alt="Admin dashboard — home overview" />
+                  </div>
+                  <div className="dash-pane txns bf-shot">
+                    <img src="/work/fortune-ecash/dashboard-transactions.png" alt="Admin dashboard — transaction management" />
+                  </div>
                 </div>
               </div>
             </div>
